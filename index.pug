@@ -1,0 +1,63 @@
+-var homeLinks = ["page 1", "page 2", "page 3", "page 4"]
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title simple site
+        link(rel="stylesheet" href="css/Normalize.css")
+        link(rel="stylesheet" href="css/main.css")
+    body
+        // Start header
+        header
+            .container
+                .header-content
+                    h2 Simple #[span site]
+                    p Simple. Contemporary. Website Template.
+        // End header
+        
+        // Start nav
+        nav.navbar
+            .container
+                ul.nav-content
+                    li.active Home
+                    each link in homeLinks
+                        li.link= link
+        // End nav
+        hr.line
+        // Start slide
+        .slide
+            .container
+                .slide-content
+                    img(src="./images/banner.jpg", alt="banner")
+        // End slide
+
+        // Start articale
+        article.art
+            .container
+                h2 Welcome to the simplestyle_banner template
+                p This standards compliant, simple, fixed width website template is released as an 'open source' design (under a #[a(href="#") Creative Commons Attribution 3.0 Licence]), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...
+                p This template is written entirely in #[b HTML5] and #[b CSS], and can be validated using the links in the footer.
+                p You can view more free HTML5 web templates #[a(href="#") here].
+                p This template is a fully functional 5 page website, with an examples page that gives #[a(href="#") examples] of all the styles available with this design.
+                h2 Browser Compatibility
+                p This template has been tested in the following browsers:
+                ul
+                    li Internet Explorer 9
+                    li FireFox 25
+                    li Google Chrome 31
+        // End articale
+        hr.line
+        // Start footer
+        footer
+            .container
+                ul.fot-link
+                    li Home
+                    each link in homeLinks
+                        li= link
+                ul.copyrights
+                    li Copyright © Simple site
+                    li pug js
+                    li sass
+                    li design from #[a(href="#") Ali hassn]
+        // End footer
